@@ -39,15 +39,15 @@ function register(){
     LoanManagementSystem.storeValidHash();
 }
 
-function askLoan(){
-    var name = prompt("name :");
-    var cibilscore = prompt("cibilscore :");
-    var Id = prompt("Id : ");
-    var password = prompt("password : ");
-    var amount = prompt("amount : ");
+// function askLoan(){
+//     var name = prompt("name :");
+//     var cibilscore = prompt("cibilscore :");
+//     var Id = prompt("Id : ");
+//     var password = prompt("password : ");
+//     var amount = prompt("amount : ");
 
-    LoanManagementSystem.createNewTransaction(name, cibilscore, Id, password, amount);
-}
+//     LoanManagementSystem.createNewTransaction(name, cibilscore, Id, password, amount);
+// }
 
 function printBlocks(i){
 
@@ -62,7 +62,7 @@ function printBlocks(i){
 
 var input = userinput();
 
-while (input != 5){
+while (1){
 
     if(input == 1){//register
         register();
@@ -128,5 +128,9 @@ while (input != 5){
             console.log(printBlocks(i));
         }
         input = userinput();
+    }
+
+    else if(input == 5){
+        break;
     }
 }
